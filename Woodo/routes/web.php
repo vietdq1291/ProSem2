@@ -14,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.layout');
 });
 
-
+Route::get('/funitures', function () {
+    return view('layouts.templates.pages.funitures');
+});
+Route::get('/contact-us', function () {
+    return view('layouts.templates.pages.contact-us');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
