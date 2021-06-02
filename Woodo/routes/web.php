@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+/*  Middleware   */
+
+Route::get('/admin','AdminController@ShowInfo')->middleware(['auth','roles:admin']);
