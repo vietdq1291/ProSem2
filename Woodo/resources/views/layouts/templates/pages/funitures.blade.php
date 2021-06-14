@@ -31,9 +31,14 @@
                                         </div>
                                          
                                         <ul>
-
+ 							 @guest
+                          	  @if (Route::has('login'))
+                          	  
+     							<a class="nav-link" href="{{ route('login') }}"style="color: white; background-color: #FABF1C" >đăng nhập để tiếp tục</a>
+                          	  @endif
+                       			 @else
                                             <li class="quick-view"><a onclick="AddCart({{$img->id}})" href="#">+ Add Cart</a></li>
-
+							@endguest
                                         </ul>
                                     </div>
                                     <div class="pi-text">

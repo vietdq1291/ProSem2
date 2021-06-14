@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,11 +44,11 @@ Route::get('/DeleteItem/{id}', [App\Http\Controllers\ProductController::class, '
 //});
 // >>>>>>> 261a88709e673979f6d7a2389b4d819eb1fd5331
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
+Route::get('/about',[\App\Http\Controllers\ArticleController::class,'index'])->name('about');
 Route::get('/company',[\App\Http\Controllers\HomeController::class,'company'])->name('company');
-Route::get('/company',[\App\Http\Controllers\HomeController::class,'company'])->name('company');
-// Route::get('/funitures',[\App\Http\Controllers\HomeController::class,'funitures'])->name('funitures');
 Route::get('/contact-us',[\App\Http\Controllers\HomeController::class,'contact'])->name('contact');
+Route::resource('/sendcontac',ArticleController::class);
+Route::get('/contact-uss',[\App\Http\Controllers\ArticleController::class,'index'])->name('contact');
 Route::get('/cart',[\App\Http\Controllers\HomeController::class,'cart'])->name('cart');
 Auth::routes();
 Route::get('/login',[\App\Http\Controllers\HomeController::class,'login'])->name('login');

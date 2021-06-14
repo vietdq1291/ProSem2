@@ -7,11 +7,11 @@
                     <div class="useful_main border_right0">
                         <h2 class="useful_text">Menus</h2>
                         <ul>
-                            <li><a href="home.html">Home</a></li>
-                            <li><a href="about.html">About </a></li>
-                            <li><a href="company.html">Company</a></li>
-                            <li><a href="furnitures.html">Furnitures</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/about">About </a></li>
+                            <li><a href="/company">Company</a></li>
+                            <li><a href="/funitures">Furnitures</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
                         </ul>
 
 
@@ -44,12 +44,7 @@
     </div>
     <!-- footer section end -->
     <!-- copyright section start -->
-    <div class="copyright">
-        <div class="container">
-            <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free html
-                    Templates</p>
-        </div>
-    </div>
+
     <!-- copyright section end -->
 
     <!-- Javascript files-->
@@ -63,18 +58,28 @@
     <script src="js/custom.js"></script>
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js">
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <!-- Default theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-    <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-    </script>
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+<!-- 
+    RTL version
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
     <script>
         $(document).ready(function () {
                     $(".fancybox").fancybox({
@@ -89,7 +94,7 @@
         	}).done(function(response){
         		$("#chages-item").empty();
    				$("#chages-item").html(response);
-	  		console.log('them thanh cong')
+	  		alertify.success('Thêm Thành Công');
 	  		
         	});
       
@@ -102,7 +107,7 @@
 //         	}).done(function(response){
 //         		$("#chages-item").empty();
 //    				$("#chages-item").html(response);
-// 	  		console.log('xóa thanh cong')
+// 	  		alertify.success('Xóa Thành Công');
 //         	});
 	console.log(this).data("id");
         });

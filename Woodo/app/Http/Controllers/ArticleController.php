@@ -15,10 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        // Danh sách bài viết
-        $article = contact::paginate(10);
-        
-        return view('home')->with('article',$article);
+        $articles= \Illuminate\Support\Facades\DB::table('articles')->get();
+        return view('pages.about',compact('articles'));
         
     }
 
@@ -51,7 +49,8 @@ class ArticleController extends Controller
      
         $article->save();
         
-        return redirect()->route('route:list')->with('msg','Đăng bài thành công');
+//         return redirect()->view('pages.home')->with('msg','Đăng bài thành công');
+        return view('layouts.templates.pages/finishcontact');
     }
 
     /**
@@ -63,6 +62,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         //
+    
     }
 
     /**

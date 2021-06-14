@@ -19,7 +19,7 @@
                         </div>
                     </td>
                     <td class="si-close">
-                  <td class="close-td" data-id="{{$item['productInfo']->id}}" ><img src="images/delete@4x.png" alt="" style="max-width: 20%;"></td>
+                  <td class="close-td" data-id="" ><img src="images/delete@4x.png" alt="" style="max-width: 20%;"></td>
 
                     
                 </tr>

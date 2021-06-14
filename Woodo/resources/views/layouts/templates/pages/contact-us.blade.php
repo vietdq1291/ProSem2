@@ -5,28 +5,29 @@
     <div class="container">
         <div class="contact_section_inner">
             <div class="contact_main">
-             <form action="{{ route('PhieuKhaoSat.store')}}" method="post">
+             <form action="{{ route('sendcontac.store')}}" method="POST">
+             @csrf
                 <h1 class="contact_text">Contact Us</h1>
                 <div class="input_main">
                
                     <div class="row">
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="col-sm-6 col-lg-3" >
                             <div class="form-group">
                             	
-                                <input type="text" class="email-bt" placeholder="Name" name="Email">
+                                <input type="text" class="name" placeholder="Name" name="name" style="     width: 100%; ">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="col-sm-6 col-lg-3" >
                             <div class="form-group">
-                                <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
+                                <input type="text" class="phone" placeholder="Phone Number" name="phone" style="     width: 100%; ">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="col-sm-6 col-lg-3" >
                             <div class="form-group">
-                                <input type="text" class="email-bt" placeholder="Email" name="Email">
+                                <input type="text" class="email" placeholder="Email" name="email" style="     width: 100%; ">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="col-sm-6 col-lg-3" >
                             <div class="social_icon">
                                 <ul>
                                     <li><img src="images/fb-icon.png"></li>
@@ -40,10 +41,10 @@
                 </div>
                 <div class="massage_box">
                     <div class="row">
-                        <div class="col-sm-8">
+                        <div class="col-sm-8" style="     width: 100%;   padding-top: 1rem;">
                             <form action="/action_page.php">
                                 <div class="form-group">
-                                    <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
+                                    <textarea class="message" placeholder="Massage" rows="5" id="message" name="message" style="     width: 100%; "></textarea>
                                 </div>
                             </form>
                         </div>
