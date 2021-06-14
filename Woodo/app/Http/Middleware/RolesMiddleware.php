@@ -19,8 +19,10 @@ class RolesMiddleware
     public function handle(Request $request, Closure $next,$role)
     {
         if( !Auth::user()||Auth::user()->role->name != $role ){
-            return redirect()->route('route:list');
+            return redirect()->route('pages.home');
+        }else {
+            return $next($request);
         }
-       return $next($request);
+     
     }
 }

@@ -7,38 +7,70 @@
         <p class="market_text">page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution o</p>
     </div>
 </div>
-<div class="our_section_2">
-    <div class="row">
-        <div class="col-sm-5">
-            <div class="images_bt">
-                <div class="image_left">
-                    <button class="seemore_bt">SEE MORE</button>
+@if($images != null)
+
+@endif
+    <!-- Product Shop Section Begin -->
+    <section class="product-shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 order-1 order-lg-2">
+                    <div class="product-list">
+                        <div class="row">
+                             @foreach($images as $img)
+                            <div class="col-lg-4 col-sm-6" >
+                            
+                                <div class="product-item">
+  							
+
+   	                             <div class="product-item">
+                                    <div class="pi-pic">
+                                        <img src="product/{{$img->im_images}}.png" alt="">
+                                        <div class="icon">
+                                            <i class="icon_heart_alt"></i>
+                                        </div>
+                                         
+                                        <ul>
+
+                                            <li class="quick-view"><a onclick="AddCart({{$img->id}})" href="#">+ Add Cart</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="pi-text">
+                                        <div class="catagory-name">{{$img->pr_name}}</div>
+                                        <a href="#">
+                                            <h5>{{$img->pr_name}}</h5>
+                                        </a>
+                                        <div class="product-price">
+                                            {{number_format($img->pr_price)}} $
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                                  @endforeach
+                                  
+                            
+                        
+                    </div>
+                    </div>
                 </div>
-                <div class="image_right">
-                    <div class="image_9"><img src="images/img-9.png"></div>
-                    <div class="new_text">NEW DESIGN</div>
-                </div>
             </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="image"><img src="images/img-4.png"></div>
-        </div>
-        <div class="col-sm-3">
-            <div class="image"><img src="images/img-5.png"></div>
-        </div>
-    </div>
-    <div class="images_section_2">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="image_6"><img src="images/img-6.png"></div>
-            </div>
-            <div class="col-sm-4">
-                <div class="image_6"><img src="images/img-7.png"></div>
-            </div>
-            <div class="col-sm-4">
-                <div class="image_6"><img src="images/img-8.png"></div>
-            </div>
-        </div>
-    </div>
-</div>
+        
+    </section>
+    <!-- Product Shop Section End -->
+
+    <!-- Js Plugins -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.zoom.min.js"></script>
+    <script src="assets/js/jquery.dd.min.js"></script>
+    <script src="assets/js/jquery.slicknav.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
 @stop

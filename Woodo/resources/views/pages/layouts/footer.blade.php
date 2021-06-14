@@ -48,3 +48,68 @@
                 Templates</p>
     </div>
 </div>
+    </div>
+    <!-- copyright section end -->
+
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"> </script>
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"> </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    </script>
+    <script>
+        $(document).ready(function () {
+                    $(".fancybox").fancybox({
+                        openEffect: "none",
+                        closeEffect: "none"
+                    });
+                });
+        function AddCart(id){
+        	$.ajax({
+        		url:'AddCart/'+id,
+        		type:'GET',
+        	}).done(function(response){
+        		$("#chages-item").empty();
+   				$("#chages-item").html(response);
+	  		console.log(response);
+	  		  		
+
+        	});
+      
+        }
+        
+        $("#chages-item").on("click",".si-close i",function(){
+        	$.ajax({
+        		url:'DeleteItem/'+$(this).data("id"),
+        		type:'GET',
+        	}).done(function(response){
+        		$("#chages-item").empty();
+   				$("#chages-item").html(response);
+	  			console.log('them thanh cong')
+        	});
+        });
+        
+        
+    
+                
+                
+                
+
+    </script>

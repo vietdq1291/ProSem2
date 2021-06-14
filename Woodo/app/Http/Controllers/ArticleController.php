@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\article;
+use App\Models\Models\contact;
 
 class ArticleController extends Controller
 {
@@ -15,9 +16,9 @@ class ArticleController extends Controller
     public function index()
     {
         // Danh sách bài viết
-        $article = article::paginate(10);
+        $article = contact::paginate(10);
         
-        return view('views.')->with('article',$article);
+        return view('home')->with('article',$article);
         
     }
 
@@ -30,7 +31,7 @@ class ArticleController extends Controller
     {
         //Tạo bài viết
         
-        return view('views.');
+        return view('layouts.templates.pages/contact-us');
     }
 
     /**
@@ -42,11 +43,11 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //hiển thị sau
-        $article = new article();
-        $article->ar_name = $request->ar_name;
-        $article->ar_description = $request->ar_description;
-        $article->ar_content = $request->ar_content;
-        $article->ar_author = $request->ar_author;
+        $article = new contact();
+        $article->name = $request->name;
+        $article->message = $request->message;
+        $article->email = $request->email;
+        $article->phone = $request->phone;
      
         $article->save();
         

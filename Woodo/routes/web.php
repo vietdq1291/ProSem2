@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-// Route::get('/', function () {
-//     return view('layouts.layout');
+// <<<<<<< HEAD
+Route::get('/', function () {
+    return view('pages.home');
+});
+
+
+Route::get('/funitures', [App\Http\Controllers\ProductController::class, 'index'])->name('product');
+Route::get('/AddCart/{id}', [App\Http\Controllers\ProductController::class, 'AddCart']);
+Route::get('/DeleteItem/{id}', [App\Http\Controllers\ProductController::class, 'DeleteItem']);
+
+// Route::get('/funitures', function () {
+//     return view('layouts.templates.pages.funitures');
 // });
-
-Route::get('/',function (){
-   return view('home'); 
-});
-
-Route::get('/funitures', function () {
-    return view('layouts.templates.pages.funitures');
-});
-Route::get('/contact-us', function () {
-    return view('layouts.templates.pages.contact-us');
-});
-=======
+// Route::get('/contact-us', function () {
+//     return view('layouts.templates.pages.contact-us');
+// });
+// =======
 //Route::get('/', function () {
 //    return view('layouts.layout');
 //});
@@ -39,11 +41,17 @@ Route::get('/contact-us', function () {
 //Route::get('/contact-us', function () {
 //    return view('layouts.templates.pages.contact-us');
 //});
->>>>>>> 261a88709e673979f6d7a2389b4d819eb1fd5331
+// >>>>>>> 261a88709e673979f6d7a2389b4d819eb1fd5331
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
 Route::get('/company',[\App\Http\Controllers\HomeController::class,'company'])->name('company');
-
+Route::get('/company',[\App\Http\Controllers\HomeController::class,'company'])->name('company');
+// Route::get('/funitures',[\App\Http\Controllers\HomeController::class,'funitures'])->name('funitures');
+Route::get('/contact-us',[\App\Http\Controllers\HomeController::class,'contact'])->name('contact');
+Route::get('/cart',[\App\Http\Controllers\HomeController::class,'cart'])->name('cart');
+Auth::routes();
+Route::get('/login',[\App\Http\Controllers\HomeController::class,'login'])->name('login');
+Route::get('/register',[\App\Http\Controllers\HomeController::class,'register'])->name('register');
 
 
 /*  Middleware   */

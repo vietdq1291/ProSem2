@@ -35,5 +35,27 @@ class HomeController extends Controller
     {
         return view('pages.company');
     }
+    public function funitures()
+    {
+        return view('layouts.templates.pages.funitures');
+    }
+    
+    public function contact()
+    {
+        return view('layouts.templates.pages.contact-us');
+    }
+    
+    public function cart()
+    {
+        return view('pages.cart');
+    }
+    
+    
+    public function login(){
+        return view('auth.login');
+    }
+    public function register(){
+        return view('auth.register');
+    }
 
 }
