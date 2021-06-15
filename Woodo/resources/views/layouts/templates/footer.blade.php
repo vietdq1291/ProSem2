@@ -80,7 +80,9 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
 <!-- Bootstrap theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
+    	new WOW().init();
         $(document).ready(function () {
                     $(".fancybox").fancybox({
                         openEffect: "none",
@@ -94,25 +96,24 @@
         	}).done(function(response){
         		$("#chages-item").empty();
    				$("#chages-item").html(response);
-	  		alertify.success('Thêm Thành Công');
+	  		alertify.success('add success');
 	  		
         	});
       
         }
         
-        $("#chages-item").on("click",".si-close i",function(){
-//         	$.ajax({
-//         		url:'DeleteItem/'+$(this).data("id"),
-//         		type:'GET',
-//         	}).done(function(response){
-//         		$("#chages-item").empty();
-//    				$("#chages-item").html(response);
-// 	  		alertify.success('Xóa Thành Công');
-//         	});
-	console.log(this).data("id");
+        $("#chages-item").on("click",".si-close close-i",function(){
+        	$.ajax({
+        		url:'DeleteItem/'+$(this).data("id"),
+        		type:'GET',
+        	}).done(function(response){
+        		$("#chages-item").empty();
+   				$("#chages-item").html(response);
+	  		alertify.success('delete success');
+        	});
+	console.log($(this).data("id"));
         });
-        
-        
+  
     
                 
                 

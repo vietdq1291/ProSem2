@@ -3,7 +3,7 @@
 @push('css')
 @endpush
 
-
+    
 @section('content')
     <div class="layout_padding about_section ">
         <div class="container">
@@ -19,7 +19,7 @@
                             <a href="about"><button class="about_bt">ABOUT MORE</button></a>
                     </div>
                     <div class="col-md-4">
-                        <div class="table_img"><img src="images/about-img.png"></div>
+                        <div class="table_img"><img src="images/about-img.png" ></div>
                     </div>
                 </div>
             </div>
@@ -75,39 +75,39 @@
             <div id="my_carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <h1 class="testi_monila_text">Testi <span
-                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Monial</span></h1>
+                        <h1 class="testi_monila_text">Our <span
+                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Team</span></h1>
                         <div class="testimonila_inner">
-                            <div class="testing_img"><img src="images/img-10.png"></div>
-                            <h2 class="helina_text">Helina</h2>
-                            <p class="dolor_text">It is a long established fact that a reader will be distracted by the
-                                readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                                here, content here', making it look</p>
+                            <div class="testing_img"><img src="images/viet.jpg" style="max-width: 13rem"></div>
+                            <h2 class="helina_text">TEAM LEAD</h2>
+                            <p class="dolor_text">This is the captain, commander, and leader of a group of two or more people. The group works according to a pre-determined common goal. </p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <h1 class="testi_monila_text">Testi <span
-                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Monial</span></h1>
+                        <h1 class="testi_monila_text">Our <span
+                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Team</span></h1>
                         <div class="testimonila_inner">
-                            <div class="testing_img"><img src="images/img-10.png"></div>
-                            <h2 class="helina_text">Helina</h2>
-                            <p class="dolor_text">It is a long established fact that a reader will be distracted by the
-                                readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                                here, content here', making it look</p>
+                            <div class="testing_img"><img src="images/vinh.jpg" style="max-width: 13rem"></div>
+                            <h2 class="helina_text">SUB LEAD</h2>
+                            <p class="dolor_text">Vice-captain, deputy, vice-president, etc. These people have roles and positions lower than Leader and higher than other members of the team.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <h1 class="testi_monila_text">Testi <span
-                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Monial</span></h1>
+                        <h1 class="testi_monila_text">Our <span
+                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Team</span></h1>
                         <div class="testimonila_inner">
-                            <div class="testing_img"><img src="images/img-10.png"></div>
-                            <h2 class="helina_text">Helina</h2>
-                            <p class="dolor_text">It is a long established fact that a reader will be distracted by the
-                                readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                                here, content here', making it look</p>
+                            <div class="testing_img"><img src="images/ha.jpg" style="max-width: 13rem"></div>
+                            <h2 class="helina_text">SUB LEAD</h2>
+                            <p class="dolor_text">Vice-captain, deputy, vice-president, etc. These people have roles and positions lower than Leader and higher than other members of the team.</p>
+                        </div>
+                    </div>
+                      <div class="carousel-item">
+                        <h1 class="testi_monila_text">Our <span
+                                style="background-color: #fee421; color: #fff; padding: 0px 5px;">Team</span></h1>
+                        <div class="testimonila_inner">
+                            <div class="testing_img"><img src="images/hh.jpg" style="max-width: 13rem"></div>
+                            <h2 class="helina_text">SUB LEAD</h2>
+                            <p class="dolor_text">Vice-captain, deputy, vice-president, etc. These people have roles and positions lower than Leader and higher than other members of the team.</p>
                         </div>
                     </div>
                 </div>
@@ -122,6 +122,7 @@
             </div>
         </div>
     </div>
+
     <!-- testi monial section end -->
     <!-- contact section start -->
     <div class="layout_padding contact_section">
@@ -164,10 +165,10 @@
                 </div>
                 <div class="massage_box">
                     <div class="row">
-                        <div class="col-sm-8" style="     width: 100%;   padding-top: 1rem;">
+                        <div class="col-sm-8" style="     width: 100%;   padding-top: 1rem; ">
                             <form action="/action_page.php">
                                 <div class="form-group">
-                                    <textarea class="message" placeholder="Massage" rows="5" id="message" name="message" style="     width: 100%; "></textarea>
+                                    <textarea class="message" placeholder="Massage" rows="5" id="message" name="message" style="     width: 100%; height: 3rem;"></textarea>
                                 </div>
                             </form>
                         </div>

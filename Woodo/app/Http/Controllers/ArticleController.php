@@ -15,7 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles= \Illuminate\Support\Facades\DB::table('articles')->get();
+//         $articles= \Illuminate\Support\Facades\DB::table('articles')->paginate(10);
+        $articles= article::paginate(5);
         return view('pages.about',compact('articles'));
         
     }

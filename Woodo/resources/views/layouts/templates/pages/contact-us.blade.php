@@ -44,7 +44,7 @@
                         <div class="col-sm-8" style="     width: 100%;   padding-top: 1rem;">
                             <form action="/action_page.php">
                                 <div class="form-group">
-                                    <textarea class="message" placeholder="Massage" rows="5" id="message" name="message" style="     width: 100%; "></textarea>
+                                    <textarea class="message" placeholder="Massage" rows="5" id="message" name="message" style="     width: 100%;height: 3rem; "></textarea>
                                 </div>
                             </form>
                         </div>

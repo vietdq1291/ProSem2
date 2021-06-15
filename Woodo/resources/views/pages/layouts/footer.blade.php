@@ -1,12 +1,12 @@
 <div class="footer_section layout_padding">
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
 
-            <div class="col-md-12">
-                <div class="useful_main border_right0">
-                    <h2 class="useful_text">Menus</h2>
-                 <ul>
+                <div class="col-md-12">
+                    <div class="useful_main border_right0">
+                        <h2 class="useful_text">Menus</h2>
+                        <ul>
                             <li><a href="/home">Home</a></li>
                             <li><a href="/about">About </a></li>
                             <li><a href="/company">Company</a></li>
@@ -14,35 +14,37 @@
                             <li><a href="/contact-us">Contact Us</a></li>
                         </ul>
 
+
+
+
+
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 ">
-                <h2 class="useful_text">Address</h2>
-                <ul class="location">
-                    <li><img src="images/map-icon.png">Locations</li>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <h2 class="useful_text">Address</h2>
+                    <ul class="location">
+                        <li><img src="images/map-icon.png">Locations</li>
 
-                    <li><img src="images/call-icon.png"><a href="company.html">+71 89078493</a></li>
-                    <li><img src="images/email-icon.png"><a href="furnitures.html">demo@gmail.com</a></li>
+                        <li><img src="images/call-icon.png"><a href="company.html">+71 89078493</a></li>
+                        <li><img src="images/email-icon.png"><a href="furnitures.html">demo@gmail.com</a></li>
 
-                </ul>
+                    </ul>
 
 
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 ">
-                <h2 class="useful_text">Newsletter</h2>
-                <div class="form-group">
-                    <input type="text" class="address_send" placeholder="Address" name="Email">
-                    <button class="subscribe_bt">Subscribe</button>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <h2 class="useful_text">Newsletter</h2>
+                    <div class="form-group">
+                        <input type="text" class="address_send" placeholder="Address" name="Email">
+                        <button class="subscribe_bt">Subscribe</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- footer section end -->
-<!-- copyright section start -->
+    <!-- footer section end -->
+    <!-- copyright section start -->
 
-
-    </div>
     <!-- copyright section end -->
 
     <!-- Javascript files-->
@@ -56,8 +58,8 @@
     <script src="js/custom.js"></script>
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"> </script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
@@ -78,7 +80,9 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
 <!-- Bootstrap theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
+    	new WOW().init();
         $(document).ready(function () {
                     $(".fancybox").fancybox({
                         openEffect: "none",
@@ -92,24 +96,24 @@
         	}).done(function(response){
         		$("#chages-item").empty();
    				$("#chages-item").html(response);
-			alertify.success('Thêm Thành Công');
-
+	  		alertify.success('add success');
+	  		
         	});
       
         }
         
-        $("#chages-item").on("click",".si-close i",function(){
+        $("#chages-item").on("click",".si-close close-i",function(){
         	$.ajax({
         		url:'DeleteItem/'+$(this).data("id"),
         		type:'GET',
         	}).done(function(response){
         		$("#chages-item").empty();
    				$("#chages-item").html(response);
-	  		alertify.success('Xóa Thành Công');
+	  		alertify.success('delete success');
         	});
+	console.log($(this).data("id"));
         });
-        
-        
+  
     
                 
                 

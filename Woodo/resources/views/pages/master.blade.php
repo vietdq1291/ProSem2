@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- basic -->
     <meta charset="utf-8">
@@ -9,15 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Woods</title>
+    <title>Furnitures</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="assets/ccs/style.css" type="text/css">
-
-    <link rel="icon" href="{{asset('/assets/images/fevicon.png')}}" type="image/gif"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-          media="screen">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+<!--     <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+<!--     <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 <!-- Default theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
@@ -25,40 +38,20 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
 <!-- Bootstrap theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-    @foreach(config('assets.master.css') as $item)
-        <link rel="stylesheet" href="{{asset("/assets/{$item}")}}">
-    @endforeach
-
-    @stack('css')
-
+    <link rel="stylesheet" href="assets/ccs/style.css" type="text/css">
 </head>
+
 <body>
-<!--header section start -->
-@include('pages.layouts.header')
-<!-- banner section end -->
-<!-- about section start -->
+    <!--header section start -->
+    @include('layouts.templates.header')
+    <!-- header section end  -->
+
+    <!-- our furniture section start -->
     @yield('content')
 
-<!-- contact section end -->
-<!-- footer section start -->
-@include('pages.layouts.footer')
-<!-- copyright section end -->
-
-<!-- Javascript files-->
-
-@foreach(config('assets.master.js') as $item)
-    <script src="{{asset("assets/{$item}")}}"></script>
-@endforeach
-
-@stack('js')
-
-<script>
-    $(document).ready(function () {
-        $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
-        });
-</script>
-
+    <!-- our furniture section end -->
+    <!-- footer section start -->
+    @include('layouts.templates.footer')
 </body>
+
 </html>

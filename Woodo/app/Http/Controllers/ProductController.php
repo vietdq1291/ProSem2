@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use SessionHandler;
 use App\Cart;
+use App\Models\product;
 class ProductController extends Controller
 {
     /**
@@ -17,11 +18,9 @@ class ProductController extends Controller
     {
         //
             
-            $images= \Illuminate\Support\Facades\DB::table('images')
-                ->join('products','products.id','=','images.im_product_id')
-                ->select('products.pr_price','products.pr_name','products.pr_description','images.im_images','products.id')
-                ->get();
-            return view('layouts.templates.pages.funitures',compact('images'));
+        
+        $product = product::paginate(9);
+        return view('layouts.templates.pages.funitures',compact('product'));
     }
 
     /**

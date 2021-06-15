@@ -3,10 +3,10 @@
         <div class="row">
 
             <div class="col-sm-12 col-lg-3">
-                <div class="logo"><img src="images/logo.png"></div>
+                <a href="/"><div class="logo"><img src="images/logo.png"></div></a>
             </div>
             <div class="col-sm-4 col-lg-5">
-                 <div class="menu-area">
+                  <div class="menu-area">
                     <nav class="navbar navbar-expand-lg ">
                         <!-- <a class="navbar-brand" href="#">Menu</a> -->
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
              <div class="col-sm-8 col-lg-4">
              @guest
                 <div class="togle_3">
-                    <div class="left_main" style="display: flex;">
+                    <div class="left_main" style="display: flex;margin-left: 14rem;">
                         
                             @if (Route::has('login'))
                                 <li class="nav-item " >
@@ -52,7 +52,7 @@
                             @endif
                         @else
                         <div class="togle_3">
-                    <div class="left_main" style="display: flex;">
+                    <div class="left_main" style="display: flex;margin-left: 14rem;">
                         
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -78,45 +78,7 @@
                            
 
                     </div>
-                    <div class="middle_main">
-                      <li class="cart-icon"><a href="#">
-                                  <img src="images/shopping-bag.png">
-                                </a>
-                                <div class="cart-hover" style="margin-right: 8rem;">
-                                <div id="chages-item">
-                                
-									<div class="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="si-text" style="width: 14rem;">
-                                                        <div class="product-selected">
-                                                            <p>₫60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                  <td class="close-td"><i><img src="images/delete@4x.png" alt="" style="max-width: 20%;"></i></td>
 
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="select-total">
-                                     <span>total:</span>
-                                        <h5>₫120.00</h5>
-                                    </div>
-                                </div>
-
-                                       
-                                    <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
-                                </div>
-                            </li>
-                    </div>
                                             @endguest
                 </div>
 
@@ -134,7 +96,8 @@
                                 <p class="number_tetx">02/3</p>
                                 <div class="line"><img src="images/linr-icon.png"></div>
                                 <p class="number_tetx">05/4</p>
-                                <div class="left_img"><img src="images/img-2.png"></div>
+                                <div class="left_img">
+                                <div<img src="images/img-2.png" ></div>
                             </div>
                             <div class="col-sm-5">
                                 <h1 class="furniture_text">2019</h1>
@@ -155,7 +118,7 @@
                                 <p class="number_tetx">12/6</p>
                                 <div class="line"><img src="images/linr-icon.png"></div>
                                 <p class="number_tetx">12/12</p>
-                                <div class="left_img"><img src="images/img-2.png"></div>
+                                <div class="left_img"><img src="images/Chair.png"></div>
                             </div>
                             <div class="col-sm-5">
                                 <h1 class="furniture_text">2020</h1>
@@ -177,7 +140,7 @@
                                 <p class="number_tetx">02/3/2019</p>
                                 <div class="line"><img src="images/linr-icon.png"></div>
                                 <p class="number_tetx">forever !!!</p>
-                                <div class="left_img"><img src="images/img-2.png"></div>
+                                <div class="left_img"><img src="images/stool.png"></div>
                             </div>
                             <div class="col-sm-5">
                                 <h1 class="furniture_text">2021</h1>
